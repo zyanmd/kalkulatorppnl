@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator PPN</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+  <header>
+    <div class="logo">Kalkulator PPN</div>
+  </header>
+
+  <main>
+    <!-- Kontainer Kalkulator -->
+    <section class="calculator">
+      <form id="ppnForm">
+        <!-- Input Harga -->
+        <label for="harga">Harga Barang (Rp):</label>
+        <input 
+          type="text" 
+          id="harga" 
+          name="harga" 
+          placeholder="Masukkan harga barang" 
+          required 
+          autocomplete="off" 
+          data-last-valid="">
+
+        <!-- Pilihan Mata Uang -->
+        <label for="currency">Mata Uang:</label>
+        <select id="currency" name="currency">
+          <option value="Rp">IDR (Rupiah)</option>
+          <option value="USD">USD (Dollar)</option>
+          <option value="EUR">EUR (Euro)</option>
+          <option value="GBP">GBP (Pound)</option>
+          <option value="JPY">JPY (Yen)</option>
+        </select>
+
+        <!-- Input PPN -->
+        <label for="ppn">PPN (%) :</label>
+        <input 
+          type="number" 
+          id="ppn" 
+          name="ppn" 
+          value="11" 
+          placeholder="Masukkan persentase PPN" 
+          required 
+          min="0">
+
+        <!-- Tombol Hitung -->
+        <button type="button" id="hitungBtn">Hitung</button>
+      </form>
+
+      <!-- Hasil Perhitungan -->
+      <div class="hasil">
+        <h2>Hasil:</h2>
+        <p id="hasilPPN">PPN: 0</p>
+        <p id="totalHarga">Total Harga: 0</p>
+      </div>
+    </section>
+<section class="note-box">
+    <i class="fas fa-info-circle"></i>
+    <p>"PPN naik terus, tapi UMR jalan di tempat. Negara dengan pajak tertinggi, tapi UMR terendah di ASEAN. Rakyat diperas, giliran koruptor cuma dihukum ringan. Kalau berani, hukum mati aja tuh koruptor, biar adil sama rakyat yang tiap hari disuruh sabar!" </p>
+  </section>
+  </main>
+
+<footer>
+  <p>
+    Dibuat dengan <span class="love">❤️</span> oleh Raihan. &copy; 2024-2025
+  </p>
+</footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

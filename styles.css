@@ -1,0 +1,389 @@
+/* Reset dasar */
+body, h1, h2, p, ul, li, a {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Memastikan body mengisi seluruh tinggi layar */
+}
+
+/* Header */
+header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+header nav ul {
+  display: flex;
+  gap: 15px;
+}
+
+header nav ul li a {
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #d4f8d4;
+}
+
+/* Main Section */
+main {
+  flex: 1; /* Membuat main mengambil sisa ruang agar footer tetap di bawah */
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.5em;
+  color: #333;
+  animation: slideDown 1s ease-out;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.1em;
+  color: #555;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1.1em;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1.1em;
+  animation: bounceIn 1s ease-in;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.hasil {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 4px;
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.hasil p {
+  font-size: 1.2em;
+  color: #333;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 50px;
+  animation: fadeIn 2s ease-in-out;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-family: 'Poppins', sans-serif; /* Gunakan font Poppins */
+}
+
+footer p {
+  margin: 0;
+  font-weight: 400; /* Berat font reguler */
+  font-size: 1em; /* Ukuran font */
+}
+
+.love {
+  display: inline-block;
+  font-size: 1.5em;
+  animation: moveLove 1s infinite alternate;
+}
+
+@keyframes moveLove {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+/* Animasi */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsif untuk perangkat kecil */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header .logo {
+    margin-bottom: 10px;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  main {
+    padding: 15px;
+    margin: 20px;
+  }
+
+  h1 {
+    font-size: 2.2em;
+  }
+
+  button {
+    font-size: 1.2em;
+  }
+
+  .hasil p {
+    font-size: 1.1em;
+  }
+}
+
+/* Reset dan styling untuk select (dropdown) */
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1.1em;
+  background-color: #fff;
+  appearance: none; /* Menghapus tampilan default dropdown untuk browser */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: border-color 0.3s ease;
+}
+
+select:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Menambahkan ikon panah pada dropdown */
+select::after {
+  content: ' ▼';
+  font-size: 0.8em;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #333;
+}
+
+/* Styling untuk label select */
+label[for="currency"] {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.1em;
+  color: #555;
+}
+
+/* Styling untuk form */
+form {
+  position: relative;
+  display: grid;
+  gap: 20px;
+}
+
+/* Styling untuk menu dropdown yang lebih besar di perangkat mobile */
+@media (max-width: 768px) {
+  select {
+    font-size: 1em;
+  }
+}
+
+/* Tabel */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th, table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  color: black; /* Menambahkan warna hitam pada teks */
+}
+
+table th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tr:hover {
+  background-color: #d4f8d4;
+  cursor: pointer;
+}
+
+/* Bagian kalkulator */
+.calculator {
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Bagian daftar barang */
+.daftar-barang {
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+
+.daftar-barang table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.daftar-barang table, .daftar-barang th, .daftar-barang td {
+  border: 1px solid #ddd;
+}
+
+.daftar-barang th, .daftar-barang td {
+  padding: 10px;
+  text-align: left;
+  color: black; /* Menambahkan warna hitam pada teks */
+}
+
+.daftar-barang th {
+  background-color: #f4f4f9;
+}
+/* Kontainer Note */
+.note-box {
+  display: flex;
+  align-items: center;
+  background-color: #fffbea;
+  color: #856404;
+  border: 1px solid #ffeeba;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.note-box i {
+  font-size: 1.5em;
+  margin-right: 10px;
+}
+
+.note-box p {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.5;
+}
